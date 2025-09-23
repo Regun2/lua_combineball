@@ -3,7 +3,7 @@ ENT.Base = "base_anim"
 ENT.PrintName = "Combine Ball"
 ENT.Author = "regunkyle (original by Jvs)"
 ENT.Information = "A lua programmed Combine Ball"
-ENT.Category = "Jvs"
+ENT.Category = "Comball"
 ENT.Spawnable = true
 ENT.AdminSpawnable = true
 
@@ -14,4 +14,5 @@ end
 
 function ENT:ShouldHurtEntity(ent)
     return ent:IsPlayer() and not self:IsOwner(ent)
+
 end
