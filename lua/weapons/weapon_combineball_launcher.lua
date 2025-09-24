@@ -6,7 +6,7 @@ end
 
 SWEP.PrintName = "Combine Ball Launcher"
 SWEP.Category  = "Other"
-SWEP.Author    = "YourName"
+SWEP.Author    = "regunkyle"
 SWEP.Instructions = [[
 - Left Click: Fire
 - Right Click: Open menu (Classes + Instances)
@@ -557,3 +557,4 @@ if CLIENT then
         end
     end)
 end
+
