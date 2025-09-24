@@ -12,12 +12,16 @@ ENT.Scale = 1
 ENT.BallLife = 0
 ENT.BounceT = 0
 
-function ENT:SpawnFunction(ply, tr)
+-- IMPORTANT: use ClassName so custom subclasses spawn themselves
+function ENT:SpawnFunction(ply, tr, ClassName)
     if not tr.Hit then return end
-    local SpawnPos = tr.HitPos + tr.HitNormal * 32
-    local ent = ents.Create("sent_combine_ball_base")
+    ClassName = ClassName or self.ClassName or "sent_combine_ball_base"
+
+    local spawnPos = tr.HitPos + tr.HitNormal * 32
+    local ent = ents.Create(ClassName)
     if not IsValid(ent) then return end
-    ent:SetPos(SpawnPos)
+
+    ent:SetPos(spawnPos)
     ent:Spawn()
     ent:Activate()
     ent:SetOwner(ply)
