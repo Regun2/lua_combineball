@@ -59,6 +59,7 @@ local CHAOS_MIN          = 1
 local CHAOS_MAX          = 10
 
 local DEFAULT_CBALL_CLASSES = {
+    "prop_combine_ball",       -- for fun
     "sent_combine_ball_base",  -- new base
     "sent_combine_ball"        -- legacy name, if present
 }
@@ -557,4 +558,5 @@ if CLIENT then
         end
     end)
 end
+
 
